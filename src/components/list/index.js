@@ -1,30 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { Container, Detail,Button } from "./style-component";
-import Modal from './Modal'
+import React from "react";
+import { Container, Detail } from "./style-component";
 
-const List = ({ data }) => {
-  // const [Person, setPerson] = useState([]);
-  const [active, setActive] = useState(false);
+const List = ({ person }) => {
 
-  // useEffect(() => {
-  //   setPerson((prevPerson) => {
-  //     return {
-  //       ...prevPerson,
-  //       data,
-  //     };
-  //   });
-
-  //   console.log(Person);
-  // }, [data]);
+  console.log(person)
 
   return (
-    <Container>
-      <img src={data.character.image} alt={data.character.id} />
+    <>
+    {person.map((character) =>
+    <Container key={character.id}>
+      <img src={character.image} alt={character.id} />
       <Detail>
-        <span>{data.character.name}</span>
-        <button onClick={() => setActive(true)}>Detalle</button>
+        <span>{character.name}</span>
+        <button >Detalle</button>
       </Detail>
     </Container>
+      )}
+    </>
   );
 };
 
