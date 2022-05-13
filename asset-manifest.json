@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/-exercise_react_graphql/static/js/main.345c118f.js",
+    "static/js/787.ec8d2a96.chunk.js": "/-exercise_react_graphql/static/js/787.ec8d2a96.chunk.js",
+    "index.html": "/-exercise_react_graphql/index.html",
+    "main.345c118f.js.map": "/-exercise_react_graphql/static/js/main.345c118f.js.map",
+    "787.ec8d2a96.chunk.js.map": "/-exercise_react_graphql/static/js/787.ec8d2a96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.345c118f.js"
+  ]
+}
