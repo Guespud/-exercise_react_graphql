@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { gql, useLazyQuery } from "@apollo/client";
 import Person from "./Person";
 import List from "../list";
-import { Btn, Loading } from "./style-component";
+import { Btn, Loading, Renderizado } from "./style-component";
 
 /* A query to the API of Rick and Morty. */
 const API_PRUEBA = gql`
@@ -34,6 +34,7 @@ const Card = () => {
 
 
 
+/* A hook that is executed when the component is mounted and when the data changes. */
   useEffect(() => {
     if (data !== undefined) {
     
@@ -68,8 +69,8 @@ const Card = () => {
           </Btn>
         </Loading>
       ) : (
-        <>
-          <Person data={data} />
+        <Renderizado>
+          <Person data={data.character} />
           <Btn>
             <button
               onClick={() =>
@@ -82,10 +83,10 @@ const Card = () => {
             </button>
           </Btn>
           <center>
-            <h2>LISTADO</h2>
+            <h2>List</h2>
           </center>
           <List person={person} />
-        </>
+        </Renderizado>
       )}
     </div>
   );

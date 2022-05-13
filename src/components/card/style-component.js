@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-const BodyContainer = styled.div`
+const Renderizado = styled.div`
   padding: 96px 90px 20px;
-  display: flex;
-  flex-direction: column;
   @media (max-width: 48em) {
     padding: 74px 40px;
   }
+`;
+const BodyContainer = styled.div`
+
+  display: flex;
+  flex-direction: column;
+ 
 `;
 
 const Container = styled.div`
@@ -166,4 +170,5 @@ export {
   Generate,
   Btn,
   Loading,
+  Renderizado
 };
